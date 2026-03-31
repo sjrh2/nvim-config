@@ -99,6 +99,12 @@ vim.lsp.enable('denols')
 -- If error in project, try making a biome.json in the project dir
 vim.lsp.enable('biome')
 
+-- C / C++
+vim.lsp.enable('clangd')
+
+-- Typst
+vim.lsp.enable('tinymist')
+
 -- COLORSCHEME:
 
 local colorscheme = "sorbet"
