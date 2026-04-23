@@ -22,6 +22,9 @@ vim.g.netrw_list_style = 3 -- configure how netrw is presented to the user
 -- Clipboard
 vim.opt.clipboard="unnamedplus"
 
+-- Spelling 
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
 
 -- Leader Key(s)
 vim.g.mapleader = ' ' -- Space as the leader key
@@ -86,6 +89,15 @@ vim.lsp.config('ty', {
     }
 })
 
+vim.lsp.config('ltex-ls', {
+    settings = {
+        ltex = {
+            language = "en-US",
+            -- latex language server settings go here
+        },
+    },
+})
+
 -- vim.lsp.enable('ruff')
 vim.lsp.enable('ty')
 vim.lsp.enable('basedpyright')
@@ -104,6 +116,13 @@ vim.lsp.enable('clangd')
 
 -- Typst
 vim.lsp.enable('tinymist')
+
+-- R language
+vim.lsp.enable('air')
+
+-- Spelling
+-- vim.lsp.enable('cspell_ls')
+vim.lsp.enable('ltex-ls')
 
 -- COLORSCHEME:
 
